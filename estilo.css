@@ -70,6 +70,10 @@ nav > ul {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    border-bottom: 5px solid brown;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px ;
+    
 }
 
 
@@ -78,18 +82,6 @@ nav > ul {
     header {
         flex-wrap: wrap;
     }
-}
-
-@media (max-width:756px ) {
-    #page-wrapper > img {
-        width: 1000px;
-        opacity: 0.1;
-    }
-}
-
-
-#page-wrapper {
-    position: relative;
 }
 
 .container .title {
@@ -104,11 +96,7 @@ nav > ul {
 @media (max-width: 996px) {
     .container {
         display: flex;
-        flex-direction: column;
-        width: auto;
-
-    
-        
+        flex-direction: column; 
     }
 }
 
@@ -136,20 +124,9 @@ nav > ul {
     border: 5px dashed green;
 }
 
-.burger-info {
-    padding: 10px;
-    height: 90px;
-    overflow: hidden;
-}
-
-.burger-info:hover {
-    overflow: auto;
-}
-
-
 .product {
     width: 20%;
-    margin: 40px;
+    margin: 20px;
     background:scroll;
     background-color: rgb(179, 179, 179);
     border: 1px solid red;
@@ -158,9 +135,30 @@ nav > ul {
     padding: 2px;
 }
 
-.product:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+.burger-info {
+    padding: 5px;
+    height: 100px;
+    margin: 0px;
+}
+
+.product-preco {
+    float: right;
+    padding: 5px;
+    color: green;
+}
+
+.burger-price {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#molhos-especiais-title {
+    text-align: center;
+    position:static;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px dashed black;
 }
 
 #molhos {
@@ -170,11 +168,29 @@ nav > ul {
     text-align: center;
 }
 
+#porcoes-title {
+    text-align: center;
+    position:static;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px dashed black;
+}
+
 #porcoes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+}
+
+#milkShake-title {
+    text-align: center;
+    position:static;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px dashed black;
 }
 
 #milkSkakes {
@@ -202,13 +218,20 @@ nav > ul {
     width: 100%;
 }
 
+@media (max-width:996px) {
+    #main-footer {
+        position: fixed;
+        
+    }
+}
+
 #main-footer {
     position: relative;
     background-color: green;
     border-radius: 5px;
 }
 
-#main-footer .title {
+.title-footer {
     text-align:center;
     color: aliceblue;
     border-radius: 5px ;
@@ -218,9 +241,11 @@ nav > ul {
 
 #payments-footer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    position: relative;
+    width: 100%;
+    
 }
 
 #payments-footer > img {
@@ -242,5 +267,5 @@ nav > ul {
 }
 
 #pix {
-    width: 250px;
+    width: 200px;
     }
