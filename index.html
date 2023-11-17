@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    
-
     <div id="page-wrapper">
         
     <Header class="header">
@@ -22,23 +20,24 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a class="nav-link" href="#inicio">Inicio</a>
+                    <a href="#inicio">Inicio</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#burger-artesanal-title">Burguers</a>
+                    <a href="#burger-artesanal-title">Burguers</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#molhos-especiais-title">Molhos</a>
+                    <a href="#molhos-especiais-title">Molhos</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#porcoes-title">Porçoes</a>
+                    <a  href="#porcoes-title">Porçoes</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#milkShake-title">Milkshake</a>
+                    <a  href="#milkShake-title">Milkshake</a>
                 </li>
             </ul>
         </nav>
     </Header>
+            <h1 id="inicio">Inicio</h1>
 
             <div class="container">
                 <div class="title">
@@ -198,5 +197,16 @@
          </section>
         </section>
     </footer>
-</body>
+    <script>
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            console.log(oldURL, newURL)
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
+    </script>
+    </body>
 </html>

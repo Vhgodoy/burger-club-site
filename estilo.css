@@ -21,11 +21,12 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+
+.menu a:hover,
+.menu a.selected {
     color: orange;
     transition: background-color 1s;
 }
-
 
 .logo > img {
     width: 150px;
@@ -56,6 +57,12 @@ nav > ul {
     display: flex;
     flex-direction: row;
     justify-content:space-around;
+ }
+
+ .inicio h1{
+    background: white;
+    color: black;
+    
  }
 
 .header {
